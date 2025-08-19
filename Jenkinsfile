@@ -30,7 +30,7 @@ pipeline {
                             composer install --no-interaction --prefer-dist --optimize-autoloader
 
                             echo "Ejecutando migraciones..."
-                            php artisan migrate --force
+                            
 
                             echo "Optimizando caches..."
                             php artisan config:clear
