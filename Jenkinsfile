@@ -18,7 +18,7 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'server-pass', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
                     sh """
-                        sshpass -p $PASS ssh -o StrictHostKeyChecking=no $USER@${SERVER_IP} '
+                        sshpass -p $PASS ssh -p 22222 -o StrictHostKeyChecking=no $USER@${SERVER_IP} '
                             set -e
                             cd ${APP_DIR} || exit
 
