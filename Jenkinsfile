@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         SERVER_IP   = "45.236.128.226"
-        APP_DIR     = "/var/www/html/dte-api"
+        APP_DIR     = "/var/www/"
         BRANCH      = "master"
     }
 
